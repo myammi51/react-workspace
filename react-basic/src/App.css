@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body, h4 {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: black;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 30px;
+}
+
+.list {
+  border-bottom: solid 1px black;
+  padding: 15px;
+}
+
+.modal {
+  background-color: beige;
+  width: 300px;
+  height: 150px;
+}
