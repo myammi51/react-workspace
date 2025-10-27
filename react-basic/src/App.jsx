@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import {Apple as Ap, Banana as Ba} from './components/Fruit'
+// 이렇게 써도 됨
+// import Kiwi, {Apple as Ap, Banana as Ba} from './components/Fruit'
+// 어차피 대표하는 애는 하나라서 이름을 뭐로 바꿔도 상관 X
+import Ki from './components/Fruit'
+import Hello from './components/Hello'
 
 function App() {
   // 일반 자바스크립트 영역
@@ -122,6 +128,13 @@ function App() {
         setModal={ setModal }
       /> 
       : null}
+
+      <Ap />
+      <Ba />
+      <Ki />
+
+      <Hello name='김김김' />
+      <Hello name='강강강' />
     </>
   );
 }

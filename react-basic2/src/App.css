@@ -1,0 +1,5 @@
+.penguins {
+  display: flex;
+  border: solid 3px lightgray;
+  width: fit-content
+}

@@ -88,3 +88,21 @@
   - 자식 컴포넌트에서는 매개변수에 props 등록 후 props.속성이름으로 사용한다
   - 부모에서 자식으로만 전달 가능하고 자식에서 부모 또는 형제로 전송은 불가능하다
   - 컴포넌트가 많아질수록 props도 많아지기 때문에 컴포넌트를 너무 남발하지 않도록 주의해야 한다
+
+# import, export
+
+  - export : 현재 파일의 자원앞에 붙이면 다른 파일에서 가져다 쓸 수 있는 자원이 된다
+  - export default : 자원 앞에 붙이면 이 파일을 대표하는 자원이 된다. 파일 맨 밑에 정의하기도 한다
+                     ({} 없이 호출 할 때 불려지는 자원이 된다)
+  - import {module...} from 'path' : 해당 파일 내부에 export가 붙은 자원을 가져다 쓰는 분법
+                                     (모듈명 뒤에 as를 붙여 별칭을 지어 사용할 수 있다)
+  - import module from 'path' : 해당 파일 내부에 export default가 붙은 자원을 가져다 쓰는 문법
+                                (대표 모듈은 as 없이도 이름을 마음대로 변경해서 사용할 수 있다)
+
+# 클래스 방식 컴포넌트
+
+  1. 생성자에서 props를 받는다
+  2. 생성자에서 state객체를 정의한다 (useState() 훅을 사용하지 않음, 개별 setter가 없음)
+  3. render() 메서드를 정의해두면 렌더링시 호출된다
+  4. componenetDidMount, componentDidUpdate, componentWillUnmount등으로
+     특정 시점에 필요한 코드를 정의할 수 있다
